@@ -19,6 +19,12 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
         [RegularExpression(@"^[0-9]\d{7}$", ErrorMessage = "Contact number must be 8 digits long and contain only numbers.")]
         public string ContactNumber { get; set; }
 
+        // Navigation properties
+
+        public ICollection<Booking> Bookings { get; set; }
+
+
+
 
     }
 }

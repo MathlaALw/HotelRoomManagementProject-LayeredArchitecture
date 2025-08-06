@@ -15,7 +15,7 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
         [ForeignKey("room")]
         public int RoomId { get; set; } // Foreign key to the Room table
 
-        [ForeignKey("Guest")]
+        [ForeignKey("guest")]
         public int GuestId { get; set; } // Foreign key to the Guest table
 
         [Required]
@@ -39,6 +39,10 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
         // One -to-many relationship with Room
         
         public Room room { get; set; } // Navigation property to the Room entity
+
+        // One-to-many relationship with Guest
+
+        public Guest guest { get; set; } // Navigation property to the Guest entity
 
 
     }

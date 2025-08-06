@@ -24,6 +24,8 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
 
         // Navigation properties
         // one to many relationship with Booking
-        public ICollection<Booking> Bookings { get; set; } 
+        public ICollection<Booking> Bookings { get; set; }
+
+        
     }
 }
