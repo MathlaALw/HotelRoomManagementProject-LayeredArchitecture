@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,15 +10,24 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
 {
     public class Review
     {
-
+        [Key]
         public int ReviewId { get; set; }
+        [ForeignKey("Guest")]
         public int GuestId { get; set; }
+        [ForeignKey("Room")]
         public int RoomId { get; set; }
+
+        [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "Comments can only contain letters and spaces.")]
         public string Comments { get; set; }
-        public int Rating { get; set; } // Assuming rating is an integer (e.g., 1 to 5)
+
+        [Required]
+        public int Rating { get; set; } 
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime ReviewDate { get; set; }
+
+
         // Navigation properties
-        public virtual Guest Guest { get; set; }
-        public virtual Room Room { get; set; }
+
     }
 }
