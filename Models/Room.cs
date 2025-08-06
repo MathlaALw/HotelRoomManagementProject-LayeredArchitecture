@@ -16,7 +16,9 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
         [Required]
         [EnumDataType(typeof(roomType))]
         public string RoomType { get; set; } // Single, Double, Suite
+        [Required]
         public decimal dailyRate { get; set; }
+        
         public bool IsAvailable { get; set; } = true; // Default to available
        
     }
