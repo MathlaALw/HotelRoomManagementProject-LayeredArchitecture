@@ -20,6 +20,10 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
         public decimal dailyRate { get; set; }
         
         public bool IsAvailable { get; set; } = true; // Default to available
-       
+
+
+        // Navigation properties
+        // one to many relationship with Booking
+        public ICollection<Booking> Bookings { get; set; } 
     }
 }

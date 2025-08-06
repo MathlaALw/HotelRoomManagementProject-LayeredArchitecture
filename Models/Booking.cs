@@ -12,8 +12,7 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
     {
         [Key]
         public  int BookingId { get; set; } // Unique identifier for the booking
-        [ForeignKey("Room")]
-        
+        [ForeignKey("room")]
         public int RoomId { get; set; } // Foreign key to the Room table
 
         [ForeignKey("Guest")]
@@ -34,5 +33,13 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
 
 
         public double TotalAmount { get; set; } // Total amount for the booking
+
+
+        // Navigation properties
+        // One -to-many relationship with Room
+        
+        public Room room { get; set; } // Navigation property to the Room entity
+
+
     }
 }
