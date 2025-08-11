@@ -22,9 +22,9 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
 
         [Required]
         [EnumDataType(typeof(Rate))]
-        public int Rating { get; set; } 
+        public int Rating { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)] // database insert today’s date automatically ( date and time when the review is created)
         public DateTime ReviewDate { get; set; }
 
 
