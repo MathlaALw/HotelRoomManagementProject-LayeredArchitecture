@@ -13,7 +13,7 @@ namespace HotelRoomManagementProject_LayeredArchitecture
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=(local);Initial Catalog=BankingDB;Integrated Security=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-AEOLTE6;Initial Catalog=HotelDB_LA;Integrated Security=True;TrustServerCertificate=True");
         }
 
         public DbSet<Guest> guests { get; set; }
