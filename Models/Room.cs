@@ -30,6 +30,8 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
 
         public ICollection<Review> Reviews { get; set; }
 
+        
+
 
     }
 }
