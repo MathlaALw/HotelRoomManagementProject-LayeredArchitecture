@@ -15,7 +15,7 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
         [ForeignKey("room")]
         public int RoomId { get; set; } // Foreign key to the Room table
 
-        [ForeignKey("guest")]
+        [ForeignKey("guest")] // Specifies that this property is a foreign key to the Guest table
         public int GuestId { get; set; } // Foreign key to the Guest table
 
         [Required]
@@ -23,11 +23,11 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
         public DateTime CheckInDate { get; set; } // Date of check-in
 
         [Required]
-        [DataType(DataType.Date)]
-        
+        [DataType(DataType.Date)] // Specifies that this property is a date type 
+
         public DateTime CheckOutDate { get; set; } // Date of check-out
 
-        [NotMapped] // This property is not mapped to the database
+        [NotMapped] // calculated in runtime and does not need to be stored in the database
         // Represents the duration of the stay in days
         public int StayDurationDays => (CheckOutDate - CheckInDate).Days;
 
