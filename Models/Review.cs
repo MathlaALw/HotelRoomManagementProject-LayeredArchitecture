@@ -21,6 +21,7 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
         public string Comments { get; set; }
 
         [Required]
+        [EnumDataType(typeof(Rate))]
         public int Rating { get; set; } 
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -28,6 +29,8 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
 
 
         // Navigation properties
+
+        public Room Room { get; set; } // Navigation property to the Room entity
 
     }
 }
