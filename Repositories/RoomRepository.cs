@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelRoomManagementProject_LayeredArchitecture.Repositories
 {
-    public class RoomRepository
+    public class RoomRepository : IRoomRepository
     {
 
         private readonly HotelDbContext _context; // private field to hold the database context
@@ -58,5 +58,5 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Repositories
 
 
 
-        }
+    }
 }
