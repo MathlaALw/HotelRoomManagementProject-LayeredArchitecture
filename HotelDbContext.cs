@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HotelRoomManagementProject_LayeredArchitecture
 {
-    class HotelDbContext : DbContext
+    public class HotelDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
