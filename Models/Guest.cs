@@ -10,11 +10,11 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Models
     public class Guest
     {
         [Key]
-        public int Id { get; set; }
+        public int GuestId { get; set; }
 
         [Required]
         [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "Name can only contain letters and spaces.")]
-        public string Name { get; set; }
+        public string GuestName { get; set; }
         [Required]
         [RegularExpression(@"^[0-9]\d{7}$", ErrorMessage = "Contact number must be 8 digits long and contain only numbers.")]
         public string ContactNumber { get; set; }
