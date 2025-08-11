@@ -9,13 +9,7 @@ namespace HotelRoomManagementProject_LayeredArchitecture.Repositories
 {
     public class GuestRepository : IGuestRepository
     {
-        // Constructor to initialize the database context
-        //private readonly HotelDbContext _context;
-        //public GuestRepository(HotelDbContext context) // constructor that takes a HotelDbContext object as a parameter
-        //{
-        //    _context = context;
-        //}
-
+   
         private readonly HotelDbContext _context; // private field to hold the database context
         public GuestRepository(HotelDbContext context) // constructor that takes a HotelDbContext object as a parameter
         {
